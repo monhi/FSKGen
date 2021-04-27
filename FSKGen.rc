@@ -1,0 +1,226 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Farsi resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FAR)
+#ifdef _WIN32
+LANGUAGE LANG_FARSI, SUBLANG_DEFAULT
+#pragma code_page(1256)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FAR)\r\n"
+    "LANGUAGE 41, 1\r\n"
+    "#pragma code_page(1256)\r\n"
+    "#include ""res\\FSKGen.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\FSKGen.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About FSKGen"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "FSKGen Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2012",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_FSKGEN_DIALOG DIALOGEX 0, 0, 482, 231
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "FSK CallerID Generator"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Generate",IDC_GENERATE,191,200,84,14
+    GROUPBOX        "FSK Configuration ",IDC_STATIC,7,4,467,175
+    GROUPBOX        "FSK Type ",IDC_STATIC,10,16,65,50
+    CONTROL         "MDMF",IDC_MDMF,"Button",BS_AUTORADIOBUTTON | WS_GROUP,19,29,35,10
+    CONTROL         "SDMF",IDC_SDMF,"Button",BS_AUTORADIOBUTTON,19,44,34,10
+    GROUPBOX        "FSK DATE (For both MDMF && SDMF)",IDC_STATIC,74,16,400,50
+    LTEXT           "Month",IDC_STATIC,197,31,21,8
+    COMBOBOX        IDC_MONTH,222,29,30,104,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Day",IDC_STATIC,261,31,14,8
+    COMBOBOX        IDC_DAY,281,29,30,124,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Hour",IDC_STATIC,318,30,16,8
+    COMBOBOX        IDC_HOUR,337,29,30,125,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Minute",IDC_STATIC,374,30,22,8
+    COMBOBOX        IDC_MINUTE,400,29,30,119,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "FSK Name (For MDMF only)",IDC_STATIC,74,120,400,59
+    CONTROL         "Name present (ascii name )",IDC_NAME_RADIO,"Button",BS_AUTORADIOBUTTON | WS_GROUP,83,132,103,10
+    CONTROL         "Name not present (ascii O character)",IDC_NOT_PRESENT_RADIO,
+                    "Button",BS_AUTORADIOBUTTON,83,148,134,10
+    CONTROL         "No Name ",IDC_NO_NAME_RADIO,"Button",BS_AUTORADIOBUTTON,83,164,47,10
+    LTEXT           "Name ",IDC_STATIC,215,132,21,8
+    EDITTEXT        IDC_NAME,247,130,122,12,ES_AUTOHSCROLL
+    GROUPBOX        "Tel Num ( For both MDMF && SDMF )",IDC_STATIC,74,67,400,49
+    CONTROL         "Number present",IDC_NUMBER_PRESENT_RADIO,"Button",BS_AUTORADIOBUTTON | WS_GROUP,84,82,67,10
+    CONTROL         "Number Not Present (ascii O character)",IDC_NUMBER_NOT_PRESENT_RADIO,
+                    "Button",BS_AUTORADIOBUTTON,83,98,141,10
+    LTEXT           "Output File Path",IDC_STATIC,13,185,53,8
+    EDITTEXT        IDC_FILE_PATH,73,183,380,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_SETFILEPATH,457,182,17,14
+    LTEXT           "Wave File Sampling frequency (Hertz)",IDC_STATIC,14,203,122,8
+    COMBOBOX        IDC_SAMPLING_FREQUNCY,137,201,48,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Number ",IDC_STATIC,217,82,26,8
+    EDITTEXT        IDC_NUMBER,247,80,122,12,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "www.DSPCottage.com"
+            VALUE "FileDescription", "Simple FSK CID generator"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "FSKGen.exe"
+            VALUE "LegalCopyright", "2012 (c) DSPCottage.  All rights reserved."
+            VALUE "OriginalFilename", "FSKGen.exe"
+            VALUE "ProductName", "FSK Generator"
+            VALUE "ProductVersion", "1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_FSKGEN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 474
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About FSKGen..."
+END
+
+#endif    // Farsi resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FAR)
+LANGUAGE 41, 1
+#pragma code_page(1256)
+#include "res\FSKGen.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

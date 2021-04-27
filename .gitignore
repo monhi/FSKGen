@@ -1,0 +1,5 @@
+*.aps
+*.sdf
+*.ncb
+Debug/
+Release/
